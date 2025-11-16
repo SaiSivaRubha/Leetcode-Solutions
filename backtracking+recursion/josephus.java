@@ -1,3 +1,4 @@
+//this is a modified one
 class Solution {
     public int findingValid(int n,int k){
     if(n==1) return 0;
