@@ -1,0 +1,22 @@
+class Solution {
+    public int helper(int[] nums,int goal){
+        if(goal<0) return 0;
+        long n=nums.length,count=0;
+        int left=0,sum=0;
+        for(int right=0;right<n;right++){
+            sum+=nums[right];
+            while(sum>goal){
+                sum-=nums[left];
+                left++;
+            }
+            count+=(right-left+1);
+            
+            
+        }
+        return (int)count;
+    }
+    public int numSubarraysWithSum(int[] nums, int goal) {
+        
+        return helper(nums,goal)-helper(nums,goal-1);
+    }
+}
