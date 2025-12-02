@@ -1,0 +1,20 @@
+// User function Template for Java
+
+class Solution {
+    // Function to return list containing first n fibonacci numbers.
+    public static int[] fibonacciNumbers(int n) {
+        // Your code here
+        if(n==1) return new int[]{0};
+        int x=0,y=1;
+        int z=0;
+        int[] arr=new int[n];
+        arr[0]=x;arr[1]=y;
+        for(int i=2;i<n;i++){
+            z=x+y;
+            arr[i]=z;
+            x=y;
+            y=z;
+        }
+        return arr;
+    }
+}
